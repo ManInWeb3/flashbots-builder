@@ -1,7 +1,8 @@
 # https://goreleaser.com/customization/builds/
 project_name: builder
 builds:
-  - id: builder
+  - main: ./cmd/geth
+    id: builder
     env:
       # Force build to be all Go.
       - CGO_ENABLED=0
@@ -19,3 +20,4 @@ builds:
       - linux
     goarch:
       - amd64
+    # command: go run build/ci.go install -static ./cmd/geth
