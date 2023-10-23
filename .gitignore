@@ -52,3 +52,7 @@ logs/
 /blacklist.json
 
 tests/spec-tests/
+
+# Ignore build artifacts
+build/builder_*.tar.gz
+build/checksums.txt
