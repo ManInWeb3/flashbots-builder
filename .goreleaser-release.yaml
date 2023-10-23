@@ -4,7 +4,7 @@ builds:
 release:
   draft: true
   extra_files:
-    - glob: ./build/*
+    - glob: ./release/*
   header: |
     # 🚀 Features
     # 🎄 Enhancements

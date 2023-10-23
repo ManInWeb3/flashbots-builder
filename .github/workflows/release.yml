@@ -69,15 +69,15 @@ jobs:
           go-version: ^1.21
       - name: Make directories
         run: |
-          mkdir -p ./build
+          mkdir -p ./release
       - name: Download binaries
         uses: actions/download-artifact@v3
         with:
           name: builder-build
-          path: ./build
+          path: ./release
       - name: Merge checksum file
         run: |
-          cd ./build
+          cd ./release
           ls -al
           cat ./builder*checksums.txt >> checksums.txt
           rm ./builder*checksums.txt
