@@ -3,21 +3,7 @@ project_name: builder
 builds:
   - main: ./cmd/geth
     id: builder
-    env:
-      # Force build to be all Go.
-      - CGO_ENABLED=0
-    flags:
-      # Remove all file system paths from the executable.
-      - -trimpath
-    ldflags:
-      # Disables DWARF debugging information.
-      - -w
-      # Disables symbol table information.
-      - -s
-      # Sets the value of the symbol.
-      - -X github.com/ManInWeb3/flashbots-builder/config.Version={{.Version}}
     goos:
       - linux
     goarch:
       - amd64
-    # command: go run build/ci.go install -static ./cmd/geth
