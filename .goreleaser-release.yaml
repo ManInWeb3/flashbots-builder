@@ -2,7 +2,7 @@
 builds:
   - skip: true
 release:
-  draft: true
+  draft: false  #true
   extra_files:
     - glob: ./release/*
   header: |
